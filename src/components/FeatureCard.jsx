@@ -1,15 +1,15 @@
-/* eslint-disable no-unused-vars */
-import React from 'react'
+import React from 'react';
 
 const FeatureCard = () => {
   return (
-    <div>
-    <div className="grid grid-rows-2 gap-4 mx-8 my-28 justify-center">
-      <div className="text-2xl ml-10 p-6 justify-self-center">Features</div>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+    <div className="bg-gray-100 p-8">
+      <div className="text-3xl font-semibold text-center mb-8">
+        Discover Our Key Features
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {/* Card 1: Price Comparison Engine */}
-        <div className="bg-white rounded-lg p-4 flex flex-col items-center">
-          <div className="mr-4">
+        <div className="bg-white rounded-lg p-4 flex flex-col items-center shadow-md">
+          <div className="mr-4 bg-blue-500 text-white rounded-full p-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -25,15 +25,15 @@ const FeatureCard = () => {
               />
             </svg>
           </div>
-          <h2 className="text-lg">Price Comparison Engine</h2>
+          <h2 className="text-xl font-semibold mb-2">Price Comparison Engine</h2>
           <p className="text-sm text-center">
             Compare prices from multiple suppliers to get the best deals.
           </p>
         </div>
 
         {/* Card 2: Real-time Market Updates */}
-        <div className="bg-white rounded-lg p-4 flex flex-col items-center">
-          <div className="mr-4">
+        <div className="bg-white rounded-lg p-4 flex flex-col items-center shadow-md">
+          <div className="mr-4 bg-green-500 text-white rounded-full p-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -49,15 +49,15 @@ const FeatureCard = () => {
               />
             </svg>
           </div>
-          <h2 className="text-lg">Real-time Market Updates</h2>
+          <h2 className="text-xl font-semibold mb-2">Real-time Market Updates</h2>
           <p className="text-sm text-center">
             Stay informed with real-time market data and price fluctuations.
           </p>
         </div>
 
         {/* Card 3: Bulk Buying Discounts */}
-        <div className="bg-white rounded-lg p-4 flex flex-col items-center">
-          <div className="mr-4">
+        <div className="bg-white rounded-lg p-4 flex flex-col items-center shadow-md">
+          <div className="mr-4 bg-yellow-500 text-white rounded-full p-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -73,15 +73,15 @@ const FeatureCard = () => {
               />
             </svg>
           </div>
-          <h2 className="text-lg">Bulk Buying Discounts</h2>
+          <h2 className="text-xl font-semibold mb-2">Bulk Buying Discounts</h2>
           <p className="text-sm text-center">
             Unlock exclusive discounts when purchasing in bulk quantities.
           </p>
         </div>
 
         {/* Card 4: Transparent Sourcing */}
-        <div className="bg-white rounded-lg p-4 flex flex-col items-center">
-          <div className="mr-4">
+        <div className="bg-white rounded-lg p-4 flex flex-col items-center shadow-md">
+          <div className="mr-4 bg-red-500 text-white rounded-full p-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -97,15 +97,14 @@ const FeatureCard = () => {
               />
             </svg>
           </div>
-          <h2 className="text-lg">Transparent Sourcing</h2>
+          <h2 className="text-xl font-semibold mb-2">Transparent Sourcing</h2>
           <p className="text-sm text-center">
             Ensure authenticity and quality with transparent sourcing.
           </p>
         </div>
       </div>
     </div>
-  </div>
-  )
+  );
 }
 
-export default FeatureCard
+export default FeatureCard;

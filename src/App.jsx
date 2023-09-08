@@ -19,6 +19,7 @@ function App() {
         <Route path="/pricecard" element={<Pricecard/>}/>
         <Route path="/weather" element={<Weather/>}/>
       </Routes>
+      <Footer/>
     </>
   );
 }
