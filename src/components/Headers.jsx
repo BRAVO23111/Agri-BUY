@@ -11,7 +11,6 @@ const Headers = () => {
         <Heading/>
         <FeatureCard/>
         <WeatherInfo/>
-        <Footer/>
     </div>
   )
 }
