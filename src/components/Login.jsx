@@ -1,13 +1,26 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 
 const LoginPage = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-
-  const handleLogin = () => {
+  const [redirect,setRedirect] =useState(false);
+  const handleLogin = async() => {
     // Add your login logic here
-    console.log(`Logged in with username: ${username} and password: ${password}`);
+   const response =  await fetch('http://localhost:3000/login',{
+      method:'POST',
+      body:JSON.stringify({username,password}),
+      headers: { "Content-Type": "application/json" },
+      credentials:'include',
+    })
+    if(response.status==200){
+      setRedirect(true)
+    }else{
+      alert('Login failed')
+    }
+    if(redirect){
+      return<Navigate to={'/'}/>
+    }
   };
 
   return (

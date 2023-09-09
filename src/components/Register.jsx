@@ -3,13 +3,29 @@ import { Link } from "react-router-dom";
 
 const RegisterPage = () => {
   const [username, setUsername] = useState("");
-  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleRegister = () => {
-    // Add your registration logic here
-    console.log(`Registered with username: ${username}, email: ${email}, and password: ${password}`);
+  const handleRegister = async () => {
+    try {
+      const response = await fetch("http://localhost:3000/register", {
+        method: "POST",
+        body: JSON.stringify({ username, password }),
+        headers: { "Content-Type": "application/json" },
+      });
+  
+      if (response.status === 200) {
+        alert('Registration Succesful')
+        // Registration successful, you can navigate to a different page or show a success message
+      } else {
+        // Registration failed, display an alert
+        alert("Registration failed. Please try again.");
+      }
+    } catch (error) {
+      // Error occurred, display an alert
+      alert("An error occurred. Please try again later.");
+    }
   };
+  
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
@@ -36,22 +52,6 @@ const RegisterPage = () => {
                 placeholder="Username"
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
-              />
-            </div>
-            <div>
-              <label htmlFor="email" className="sr-only">
-                Email address
-              </label>
-              <input
-                id="email"
-                name="email"
-                type="email"
-                autoComplete="email"
-                required
-                className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-                placeholder="Email address"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
               />
             </div>
             <div>
