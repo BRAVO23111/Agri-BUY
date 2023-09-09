@@ -7,7 +7,7 @@ const LoginPage = () => {
   const [redirect,setRedirect] =useState(false);
   const handleLogin = async() => {
     // Add your login logic here
-   const response =  await fetch('http://localhost:3000/login',{
+   const response =  await fetch('https://agri-buy-1.vercel.app/login',{
       method:'POST',
       body:JSON.stringify({username,password}),
       headers: { "Content-Type": "application/json" },
